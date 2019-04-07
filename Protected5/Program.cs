@@ -10,6 +10,11 @@ namespace Protected5
     {
         static void Main(string[] args)
         {
+            A a = new A();
+            Console.WriteLine(a.C);
+            B b = new B(3);
+
+            Console.WriteLine($"a = {b.a}, b = {b.b}, d = {b.d}");
         }
     }
 }

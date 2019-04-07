@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Protected5
 {
-    class Warehouse : IComparable
+    class Warehouse : IComparable<Warehouse>
     {
         private string Manufacturer { get; set; }
         private string TypeOfItem { get; set; }
@@ -165,9 +165,8 @@ namespace Protected5
         }
 
         // CompareTo override.
-        public int CompareTo(object obj)
+        public int CompareTo(Warehouse temp)
         {
-            Warehouse temp = obj as Warehouse;
             return this.Price.CompareTo(temp.Price);
         }
     }
